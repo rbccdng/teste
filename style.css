@@ -1,0 +1,433 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --backgroundcolor: #FFD0D0;
+    --corbtns: #ffa4ad;
+    --corfundobtns: #a74750;
+    --cortexto: #000000;
+    --fecharmodal: #f76c7a;
+    --OpacidadeFundoModal: rgba(85, 40, 40, 0.5);
+}
+.darkmode{
+    --backgroundcolor: #2F2566;
+    --corbtns: #4535A1;
+    --corfundobtns: #120E29;
+    --cortexto: #ffffff;
+    --fecharmodal: #331fa3;
+    --OpacidadeFundoModal: rgba(40, 47, 85, 0.5);
+}
+body{
+    background-color: var(--backgroundcolor);
+}
+
+.BarraInicio{
+    width: 95%;
+    margin: auto;
+}
+#BarraDeTarefas{
+    height: 70px;
+    width: 95%;
+    border-radius: 5vh;
+    background-color: var(--corbtns);
+    position: absolute;
+    border: var(--corfundobtns) 6px solid;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+}
+.italiana-regular {
+    font-family: "Italiana", sans-serif;
+    font-style: normal;
+  }
+.Nome{
+    margin-left: 1%;
+    font-family: "Italiana", sans-serif;
+    font-size: 40px;
+    font-weight: lighter;
+    display: flex;
+    margin-top: 0.5%;
+    color: var(--cortexto);
+}
+
+#BotaoModos{
+    background-color: var(--corfundobtns);
+    width: 60px;
+    height: 30px;
+    border-radius: 5vh;
+    margin-top: -1%;
+    position: relative;
+
+
+}
+#BotaoBrancoModos{
+    background-color: white;
+    border-radius: 6vh;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    left: 0;
+    width: 32px;
+    height: 30px;
+    animation-name: ModoEscuro;
+    animation-duration: 0.5s;
+}
+
+#check { position: absolute;
+z-index: 2;
+width: 100%;
+height: 100%;
+opacity: 0;
+}
+
+#check:checked+#BotaoBrancoModos { left: 28px;}
+
+/*HELLO WORLD*/
+
+.Icones{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
+    margin-top: 1%;
+    padding-left: 57%;
+}
+#HelloWorld{
+    padding-top: 22%;
+    font-family: "Italiana", sans-serif;
+    font-weight: lighter;
+    color: var(--cortexto);
+    margin-left: 15%;
+    font-size: 60px;
+    max-width: 20%;
+}
+#EuSou{
+    font-family: "Italiana", sans-serif;
+    font-weight: lighter;
+    color: var(--cortexto);
+    margin-left: 8%;
+    font-size: 40px;
+    max-width: 40%;
+}
+.BtnsInicio{
+    margin-left: 13%;
+    max-width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2%;
+    margin-top: 2%;
+    text-decoration: none;   
+    font-family: "Italiana", sans-serif;
+    font-size: 30px;
+    color: var(--cortexto);
+}
+.BtnContato{
+    width: 160px;
+    height: 60px;
+    background-color: var(--corbtns);
+    border-radius: 5vh;
+    text-align: center;
+    padding-top: 3%;
+    box-shadow: 7px 8px var(--corfundobtns);
+}
+#BtnContato{
+    text-decoration: none;
+    color: var(--cortexto);
+}
+.BtnProjetos{
+    width: 160px;
+    height: 60px;
+    background-color: var(--corbtns);
+    border-radius: 5vh;
+    text-align: center;
+    text-decoration: none;
+    color: var(--cortexto);
+    padding-top: 3%;
+    box-shadow: 7px 8px var(--corfundobtns);
+}
+#BtnProjetos{
+    text-decoration: none;
+    color: var(--cortexto);
+}
+
+#DIVFotoPerfil{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    border-radius: 360px;
+    background-color: rgba(255, 0, 0, 0);
+    margin-left: 55%;
+    margin-top: -20%;
+}
+#FotodePerfil{
+     width: 100%;
+    height: 60vh; 
+    border-radius: 360px;
+    object-fit: cover;
+    box-shadow: 12px 15px var(--corfundobtns);
+}
+
+/*SOBRE MIM*/
+
+#CaixaSobreMim{
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25%;
+    width: 85%;
+    height: 500px;
+    background-color: var(--corbtns);
+    border-radius: 5vh;
+    box-shadow: 20px 20px var(--corfundobtns);
+}
+.SobreMim{
+    font-family: "Italiana", sans-serif;
+    font-size: 55px;
+    text-align: center;
+    color: var(--cortexto);
+}
+.TextoSobreMim{
+    font-family: "Italiana", sans-serif;
+    font-size: 35px;
+    text-align: justify;
+    color: var(--cortexto);
+    margin-top: 3%;
+    margin: 6%;
+    font-weight: 500;
+}
+
+
+/*PROJETOS*/
+
+
+#TabelaProjetos{
+    font-size: 55px;
+    text-align: center;
+    margin-top: 15%;
+    font-weight: lighter;
+    color: var(--cortexto);
+}
+
+#ProjetosContainer{
+    display: grid;
+    grid-template-columns: 600px 650px;
+    grid-template-rows: 300px 300px;
+    gap: 40px;
+    max-width: 70%;
+    margin: 6%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.GridProjetos{
+    background: var(--corbtns);
+    border-radius: 5vh;
+    box-shadow: 12px 15px var(--corfundobtns);
+    font-family: "Italiana", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+.GridProjetos:hover{
+    background-color: var(--corfundobtns);
+    transition: 0.5s;
+}
+#ProjetosContainer2{
+    display: grid;
+    grid-template-rows: 120px 120px;
+    gap: 60px;
+}
+
+.LinksGridProjetos{
+    text-decoration: none;
+    color: var(--cortexto);
+}
+
+.GridProjetos2{
+    background: var(--corbtns);
+    border-radius: 3vh;
+    box-shadow: 12px 15px var(--corfundobtns);
+    font-family: "Italiana", sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+.GridProjetos2:hover{
+    background-color: var(--corfundobtns);
+    transition: 0.5s;
+}
+#CheckBoxProjetos{
+    width: 200px;
+    height: 85px;
+    border-radius: 5vh;
+    background-color: var(--corbtns);
+    box-shadow: 7px 8px var(--corfundobtns);
+}
+
+/*HABILIDADES*/
+
+#HabilidadesContainer{
+    max-width: 74%;
+    height: 92vh;
+    padding-top: 10%;
+    margin: 4%;
+    transform: translate(20%);
+}
+#TituloHbs{
+    margin-bottom: 5%;
+    font-size: 55px;
+    font-weight: lighter;
+    color: var(--cortexto);
+    margin-right: 50%;
+    margin-left: 33%;
+}
+#GridPrimeiraLinhaHabilidades{
+    display: grid;
+    grid-template-columns: 700px 400px;
+    grid-template-rows: 270px;
+    gap: 35px;
+    row-gap: 130px;
+    color: var(--cortexto);
+}
+
+#GridPrimeiraLinhaHabilidades2{
+    display: grid;
+    grid-template-rows: 100px;
+    gap: 70px;
+}
+
+.Hbs{
+    background-color: var(--corbtns);
+    border-radius: 5vh;
+    box-shadow: 12px 15px var(--corfundobtns);
+    font-family: "Italiana", sans-serif;
+    text-align: center;
+    font-weight: lighter;
+
+}
+
+#TextosHbsCSharp{
+    margin-top: 5%;
+}
+
+#TextosHbsLINUX{
+    margin-top: 5%;
+}
+
+#TextosHbsHTML{
+    margin-top: 30%;
+}
+
+.Hbs:hover{
+    background-color: var(--corfundobtns);
+    transition: 0.5s;
+}
+.Hbs2{
+    background-color: var(--corbtns);
+    border-radius: 5vh;
+    box-shadow: 12px 15px var(--corfundobtns);
+    font-family: "Italiana", sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    height: 320px;
+    color: var(--cortexto);
+}
+.Hbs2:hover{
+    background-color: var(--corfundobtns);
+    transition: 0.5s;
+}
+#GridSegundaLinhaHabilidades{
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: 550px 550px;
+    gap: 35px;
+}
+
+#TextosHbsMySQL{
+    margin-top: 25%;
+}
+
+#TextosHbsCSS{
+    margin-top: 25%;
+}
+
+/*CONTATO*/
+
+#TituloContato{
+    text-align: center;
+    margin-top: 25%;
+    font-size: 55px;
+    font-weight: lighter;
+    color: var(--cortexto);
+}
+#DivContato{
+    max-width: 40%;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 550px 550px;
+    grid-template-rows: 250px 250px;
+    gap: 35px;
+    row-gap: 35px;
+    margin-left: 19%;
+}
+.GridContato{
+    background-color: var(--corbtns);
+    box-shadow: 12px 15px var(--corfundobtns);
+    border-radius: 5vh;
+    text-align: center;
+}
+.GridContato:hover{
+    background-color: var(--corfundobtns);
+    transition: 0.5s;
+}
+.AreasdeContato{
+    font-family: "Italiana", sans-serif;
+    color: var(--cortexto);
+    font-size: 35px;
+    font-weight: 600;
+    margin-top: 10%;
+}
+#GithubAreadeContato{
+    font-family: "Italiana", sans-serif;
+    color: var(--cortexto);
+    text-decoration: none;
+    font-size: 35px;
+    top: 15%;
+    font-weight: 600;
+}
+#TelefoneAreaDeContato{
+    margin-top: 3%;
+    color: var(--cortexto);
+}
+#LinkedInAreadeContato{
+    font-family: "Italiana", sans-serif;
+    color: var(--cortexto);
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 600;
+}
+#EmailAreaContato{
+    font-family: "Italiana", sans-serif;
+    color: var(--cortexto);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+    top: 15%;
+}
+
+
+/*RODAPÉ*/
+
+#Rodape{
+    margin-top: 10%;
+    width: 100%;
+    height: 15vh;
+    background-color: var(--corfundobtns);
+}
+#DireitosRodape{
+    text-align: center;
+    font-size: 22px;
+    color: var(--cortexto);
+    padding-top: 3%;
+}
